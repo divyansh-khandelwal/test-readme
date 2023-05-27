@@ -1,0 +1,90 @@
+GitHub Documentation (Developer Edition):
+
+To start working on the Project repository follow these steps:
+
+1. Clone the repository to your local machine using the command:
+--git clone <repository_url>
+2. Install the necessary dependencies as outlined in the project's documentation.
+3. Configure your development environment as specified in the project's documentation.
+4. Check that you have the required permissions to contribute to the repository.
+
+Pushing Changes:
+
+1. Create a New Branch: Switch to the branch that contains the changes you want to merge.
+--git checkout -b <branch-name>
+2. Stage your changes using the git add command:
+--git add <file1> <file2> ...
+3. Commit your changes with a descriptive message (short discription of what you have changed):
+--git commit -m "Your commit message"
+4. Push your changes to the remote repository:
+--git push origin <branch-name>
+(Note: Replace <branch-name> with the name of the branch you want to push your changes to.)
+5. Then your changes will be uploaded to the remote repository, and other team members can access and review them (reviewing is optional).
+
+Pull requests:
+
+1. Navigate to the repository on GitHub.
+2. Switch to the branch that contains the changes you want to merge.
+3. Click on the "New pull request" button.
+4. On the pull request page, select the base branch (the branch you want to merge into) and the compare branch (the branch with your changes).
+5. Review the changes and provide a descriptive title and description for your pull request.
+6. If there are specific reviewers you want to assign, add them to the pull request.
+7. Click on the "Create pull request" button to submit your request.
+8. The pull request will be automatically assigned to the reviewers, who will review your changes, provide feedback, and discuss any necessary modifications.
+9. Make any requested changes and push the updates to the branch associated with your pull request.
+10. Once the changes are approved, the pull request can be merged into the base branch.
+11. After merging, the changes will be reflected in the base branch, and the pull request will be closed.
+12. Delete the Branch: After merging, the branch associated with the pull request can be deleted.
+--git branch -d <branch-name>
+(Replace "branch-name" with actual branch name)
+
+Additional Resources
+
+1. GitHub Guides - Forking Projects: A comprehensive guide on forking a GitHub repository.
+ https://docs.github.com/en/get-started/quickstart/contributing-to-projects
+2. GitHub Pull Request Documentation: Official documentation on pull requests from GitHub.
+ https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+3. Git Documentation: Official documentation for Git.
+ https://git-scm.com/doc
+
+These are some advanced Git commands that we may find useful in our future work:
+
+1. git rebase: This command allows you to modify the commit history by incorporating changes from one branch onto another. It can be used to keep your 
+branch up to date with the latest changes from the main branch and create a cleaner commit history.
+--git rebase <branch>
+2. git cherry-pick: This command lets you pick specific commits from one branch and apply them to another branch. It's useful when you want to include specific
+changes without merging the entire branch.
+--git cherry-pick <commit-hash>
+3. git reflog: The reflog command shows a log of all the Git references, including branches, commits, and HEAD positions. It's helpful for recovering lost commits
+or branches that may have been deleted accidentally.
+--git reflog
+4. git stash: Stashing allows you to save your changes temporarily and switch to another branch without committing them. It's useful when you need to switch to
+a different task or branch quickly.
+--git stash save <stash-name>
+5. git bisect: This command helps you find the commit that introduced a bug by performing a binary search through the commit history. It automates the process 
+of narrowing down the problematic commit.
+--git bisect start
+--git bisect bad
+--git bisect good <commit>
+6. git submodule: Submodules allow you to include other repositories as subdirectories within your main repository. This is useful when you want to incorporate 
+external codebases or libraries as part of your project.
+--git submodule add <repository-url>
+--git submodule update --init
+7. git revert: The revert command undoes a previous commit by creating a new commit that undoes the changes introduced by the specified commit. It's a safer 
+alternative to directly modifying the commit history using commands like git reset.
+--git revert <commit-hash>
+8. git remote: This command manages the remote repositories associated with your local repository. It allows you to add, remove, or modify remote repositories, 
+as well as configure different URLs for fetching and pushing.
+--git remote add <remote-name> <repository-url>
+--git remote remove <remote-name>
+9. git clean: The clean command removes untracked files from your working directory. It's helpful when you want to get rid of files that are not necessary for your
+project.
+--git clean -n        # Dry run
+--git clean -f        # Remove untracked files
+10. git archive: The archive command creates a tar or zip archive of the specified commit, branch, or directory. It's useful when you want to distribute a snapshot 
+of your project without including the entire Git history.
+--git archive -o <output-file> <commit/branch>
+11. Each command may have additional options and flags that can be explored in the Git documentation or by using the git help command followed by the 
+command name.
+example:  --git help commit
+Executing this command will display the Git documentation for the commit command.
